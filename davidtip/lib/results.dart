@@ -9,7 +9,7 @@ class Results extends StatelessWidget {
   });
 
   final int bill;
-  final int perperson;
+  final dynamic perperson;
 
   calculations(){
     return (bill/perperson);
