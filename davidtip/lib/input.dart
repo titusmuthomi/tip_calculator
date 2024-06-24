@@ -66,17 +66,19 @@ class _InputState extends State<Input> {
             ),
 
             ElevatedButton(onPressed: (){
+              // getitng user input
               int bill = int.parse(billController.text);
               double tip = double.parse(tipController.text);
               int perperson = int.parse(personsController.text);
 
-            total(bill, tip);
+              // calculating
+            var totalBill = total(bill, tip);
             var shares = share(bill, perperson);
 
 
               
 
-              Navigator.push(context, MaterialPageRoute(builder: (_)=> Results(bill: bill, perperson: shares)));
+              Navigator.push(context, MaterialPageRoute(builder: (_)=> Results(bill: totalBill, perperson: shares)));
 
             }, child: const Text('Calculate'))
 
